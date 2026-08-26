@@ -1,0 +1,25 @@
+resources:
+  jobs:
+    job_retail_orchestrator_johan_avalos:
+      name: "[${bundle.target}] job_retail_orchestrator_johan_avalos"
+      parameters:
+        - name: env
+          default: "${bundle.target}"
+        - name: target_catalog
+          default: "${var.catalog_name}"
+      email_notifications:
+        on_success:
+          - "johanavaloscampos@gmail.com"
+        on_failure:
+          - "johanavaloscampos@gmail.com"
+      tasks:
+        - task_key: run_declarative_pipeline
+          pipeline_task:
+            pipeline_id: ${resources.pipelines.pipeline_retail_johan_avalos.id}
+        - task_key: check_pipeline_condition
+          depends_on:
+            - task_key: run_declarative_pipeline
+          condition_task:
+            op: EQUAL_TO
+            left: "{{tasks.run_declarative_pipeline.result_state}}"
+            right: "SUCCESS"

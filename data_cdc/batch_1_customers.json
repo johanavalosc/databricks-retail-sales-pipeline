@@ -1,0 +1,10 @@
+{"customer_id": 1, "nombre": "Carlos Perez", "email": "carlos.perez@example.com", "ciudad": "San Jose", "tier_membresia": "Bronze", "timestamp_cambio": "2026-08-01 08:00:00", "operacion_cdc": "INSERT"}
+{"customer_id": 2, "nombre": "Ana Gomez", "email": "ana.gomez@example.com", "ciudad": "Heredia", "tier_membresia": "Silver", "timestamp_cambio": "2026-08-01 08:05:00", "operacion_cdc": "INSERT"}
+{"customer_id": 3, "nombre": "Mario Rojas", "email": "mario.rojas@example.com", "ciudad": "Alajuela", "tier_membresia": "Bronze", "timestamp_cambio": "2026-08-01 08:10:00", "operacion_cdc": "INSERT"}
+{"customer_id": 4, "nombre": "Laura Castillo", "email": "laura.castillo@example.com", "ciudad": "Cartago", "tier_membresia": "Gold", "timestamp_cambio": "2026-08-01 08:15:00", "operacion_cdc": "INSERT"}
+{"customer_id": 5, "nombre": "Diego Fernandez", "email": "diego.f@example.com", "ciudad": "San Jose", "tier_membresia": "Bronze", "timestamp_cambio": "2026-08-01 08:20:00", "operacion_cdc": "INSERT"}
+{"customer_id": 6, "nombre": "Valeria Mora", "email": "valeria.mora@example.com", "ciudad": "Puntarenas", "tier_membresia": "Silver", "timestamp_cambio": "2026-08-01 08:25:00", "operacion_cdc": "INSERT"}
+{"customer_id": 7, "nombre": "Esteban Soto", "email": "esteban.soto@example.com", "ciudad": "Limon", "tier_membresia": "Bronze", "timestamp_cambio": "2026-08-01 08:30:00", "operacion_cdc": "INSERT"}
+{"customer_id": 8, "nombre": "Sofia Vargas", "email": "sofia.v@example.com", "ciudad": "Guanacaste", "tier_membresia": "Gold", "timestamp_cambio": "2026-08-01 08:35:00", "operacion_cdc": "INSERT"}
+{"customer_id": 9, "nombre": "Gabriel Navarro", "email": "gabriel.n@example.com", "ciudad": "San Jose", "tier_membresia": "Platinum", "timestamp_cambio": "2026-08-01 08:40:00", "operacion_cdc": "INSERT"}
+{"customer_id": 10, "nombre": "Lucia Jimenes", "email": "lucia.j@example.com", "ciudad": "Heredia", "tier_membresia": "Silver", "timestamp_cambio": "2026-08-01 08:45:00", "operacion_cdc": "INSERT"}

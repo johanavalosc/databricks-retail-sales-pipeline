@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    pipeline_retail_johan_avalos:
+      name: "[${bundle.target}] pipeline_retail_johan_avalos"
+      target: "${var.schema_name}"
+      catalog: "${var.catalog_name}"
+      channel: preview
+      serverless: true
+      configuration:
+        catalog: "${var.catalog_name}"
+        schema: "${var.schema_name}"
+        student_name: "${var.student_name}"
+        marketplace_catalog: "${var.marketplace_catalog}"
+        cdc_volume_path: "${var.cdc_volume_path}"
+      libraries:
+        - file:
+            path: ../src/transformations.sql

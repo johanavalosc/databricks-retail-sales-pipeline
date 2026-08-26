@@ -1,0 +1,41 @@
+bundle:
+  name: pf_avalos_retail
+
+variables:
+  catalog_name:
+    description: "Catalogo destino de Unity Catalog"
+    default: "dab_lab_dev"
+  schema_name:
+    description: "Esquema destino de Unity Catalog"
+    default: "default"
+  student_name:
+    description: "Nombre del estudiante"
+    default: "johan_avalos"
+  marketplace_catalog:
+    description: "Catalogo origen del Marketplace"
+    default: "databricks_simulated_retail_customer_data"
+  cdc_volume_path:
+    description: "Ruta del volumen Unity Catalog para Auto Loader"
+    default: "/Volumes/dab_lab_dev/default/customers_cdc_raw"
+
+include:
+  - resources/*.yml
+
+targets:
+  development:
+    mode: development
+    default: true
+    variables:
+      catalog_name: "dab_lab_dev"
+      cdc_volume_path: "/Volumes/dab_lab_dev/default/customers_cdc_raw"
+    workspace:
+      host: "https://dbc-59a5d508-9d75.cloud.databricks.com"
+
+  production:
+    mode: production
+    variables:
+      catalog_name: "dab_lab_prod"
+      cdc_volume_path: "/Volumes/dab_lab_prod/default/customers_cdc_raw"
+    workspace:
+      host: "https://dbc-59a5d508-9d75.cloud.databricks.com"
+      root_path: "/Workspace/Users/johanavaloscampos@gmail.com/.bundle/${bundle.name}/${bundle.target}"

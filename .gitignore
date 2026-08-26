@@ -1,0 +1,16 @@
+# Databricks local state
+.databricks/
+.bundle/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
