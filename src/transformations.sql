@@ -87,5 +87,7 @@ AS SELECT
     total_ordenes,
     total_clientes_activos,
     total_items_vendidos,
-    promedio_items_por_orden
+    promedio_items_por_orden,
+    round(total_items_vendidos / nullif(total_clientes_activos, 0), 2) as items_promedio_por_cliente
 FROM LIVE.gold_sales_by_customer_tier;
+
